@@ -25,7 +25,7 @@ body {
 
 /* Navbar fija en la parte superior */
 .navbar {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
