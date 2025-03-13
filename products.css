@@ -1,0 +1,197 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+}
+
+/* Fondo fijo */
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/fondo.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+}
+
+/* Navbar fija en la parte superior */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+}
+
+/* Contenedor del logo */
+.logo_padre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+}
+
+/* Logo */
+.logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Menú de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+/* Ajuste del contenido para que empiece justo después de la navbar */
+.content {
+    position: relative;
+    padding: 180px 20px 20px; /* 100px arriba para evitar que el contenido quede detrás de la navbar */
+    background-color: rgba(0, 0, 0, 0.0);
+    min-height: 100vh;
+}
+
+/* Contenedor flexible para el texto e imagen */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 20px auto;
+    gap: 20px;
+
+    background-color: black;
+}
+
+/* Ajuste para que el texto y la imagen ocupen la mitad del ancho */
+.text-container, .image-container {
+    width: 50%;
+}
+.text-container {
+    padding: 20px;
+    text-align: justify;
+    font-size: 14px;
+}
+.home_title {
+    text-align: center;
+}
+
+.parrafo_home { 
+
+    font-size: 12px;
+}
+/* Imagen dentro del contenedor */
+.image-container img {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Video centrado con tamaño ajustado al viewport */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; /* Espacio después del contenido */
+    width: 100%;
+}
+
+.video-container video {
+    width: 50%; /* Hace que el video ocupe el ancho completo */
+    max-width: 600px; /* Máximo tamaño del video */
+    height: auto; /* Mantiene la proporción del video */
+    max-height: 80vh; /* Limita la altura máxima a un 80% del viewport */
+    object-fit: contain; /* Mantiene la relación de aspecto */
+}
+
+.black_container {
+
+    height: 200px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ .black_logo {
+ 
+     width: 100px;
+     height: 100px;
+     object-fit: contain;
+ }
+ 
+/* RESPONSIVE: En móvil, el contenido se apila */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .logo_padre {
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding: 0;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .content {
+        padding: 150px 20px 20px; /* Espacio adicional para navbar en móvil */
+    }
+
+    .content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-container, .image-container {
+        width: 100%;
+    }
+
+    .video-container video {
+        max-width: 100%; /* Ajusta el video para pantallas más pequeñas */
+        max-height: 60vh; /* Limita la altura a un 60% en móviles */
+    }
+}
