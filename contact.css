@@ -30,7 +30,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 20px;
+    padding: 30px 40px; /* Aumentamos el padding para hacer la barra más grande */
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
     position: relative; /* Ya no es fija */
@@ -41,14 +41,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 100px;
+    width: 200px; /* Aumentamos el tamaño del logo */
+    height: 200px;
 }
 
 /* Logo */
 .logo {
-    width: 100px;
-    height: 100px;
+    width: 200px; /* Aumentamos el tamaño del logo */
+    height: 200px;
     object-fit: contain;
 }
 
@@ -59,13 +59,13 @@ body {
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin-left: 25px; /* Aumentamos el espacio entre los enlaces */
 }
 
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 36px; /* Aumentamos el tamaño de la fuente */
     transition: color 0.3s;
 }
 
@@ -132,13 +132,11 @@ body {
     object-fit: contain;
 }
 
-
-
 /* Estilos generales para el formulario */
 .contact-form-container {
-    max-width: 500px; /* Limitar el ancho del formulario */
+    max-width: 800px; /* Hicimos el formulario un 60% más grande */
     margin: 0 auto; /* Centrar el formulario */
-    padding: 20px;
+    padding: 30px;
     background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro y semi-transparente */
     border-radius: 10px; /* Bordes redondeados */
     color: white;
@@ -147,27 +145,27 @@ body {
 
 /* Título del formulario */
 .contact-form-container h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 36px; /* Aumentamos el tamaño del título */
+    margin-bottom: 30px; /* Aumentamos el margen inferior */
 }
 
 /* Contenedor de cada campo del formulario */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Aumentamos el espacio entre los campos */
     text-align: left;
 }
 
 .form-group label {
-    font-size: 16px;
+    font-size: 20px; /* Aumentamos el tamaño de la fuente */
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
+    padding: 15px; /* Aumentamos el padding */
+    font-size: 20px; /* Aumentamos el tamaño de la fuente */
     border: 1px solid #fff; /* Borde blanco */
     border-radius: 5px; /* Bordes redondeados */
     background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para los campos */
@@ -175,13 +173,13 @@ body {
 }
 
 .form-group textarea {
-    height: 150px; /* Altura para el campo de mensaje */
+    height: 200px; /* Aumentamos la altura del área de texto */
 }
 
 /* Botón de enviar */
 .submit-btn {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 15px 30px; /* Aumentamos el tamaño del botón */
+    font-size: 20px; /* Aumentamos el tamaño de la fuente */
     color: white;
     background-color: black; /* Fondo negro */
     border: 2px solid white; /* Borde blanco */
@@ -193,23 +191,22 @@ body {
 .submit-btn:hover {
     background-color: #f39c12; /* Color de fondo cuando se pasa el ratón */
 }
+
 /* Diseño para móviles */
 @media (max-width: 768px) {
-    
-    
     .contact-form-container {
-        padding: 20px;
+        padding: 25px;
         margin: 0 20px;
     }
 
     .form-group input,
     .form-group textarea {
-        font-size: 14px;
+        font-size: 18px; /* Reducimos ligeramente el tamaño de la fuente en móvil */
     }
 
     .submit-btn {
-        font-size: 14px;
-        padding: 10px 15px;
+        font-size: 18px; /* Reducimos el tamaño del botón en móvil */
+        padding: 15px 25px;
     }
     
     .navbar {

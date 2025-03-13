@@ -1,4 +1,3 @@
-/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 32px; /* Doblamos el tamaño base de la fuente */
     line-height: 1.5;
     font-family: Arial, sans-serif;
 }
@@ -30,7 +29,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 20px;
+    padding: 30px 40px; /* Doblamos el padding */
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
     position: relative; /* Ya no es fija */
@@ -41,14 +40,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 100px;
+    width: 200px; /* Doblamos el tamaño */
+    height: 200px; /* Doblamos el tamaño */
 }
 
 /* Logo */
 .logo {
-    width: 100px;
-    height: 100px;
+    width: 200px; /* Doblamos el tamaño */
+    height: 200px; /* Doblamos el tamaño */
     object-fit: contain;
 }
 
@@ -59,13 +58,13 @@ body {
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin-left: 25px; /* Doblamos el margen */
 }
 
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 36px; /* Doblamos el tamaño de la fuente */
     transition: color 0.3s;
 }
 
@@ -76,7 +75,7 @@ body {
 /* Ajuste del contenido para que empiece justo después de la navbar */
 .content {
     position: relative;
-    padding: 20px; /* Eliminamos el padding-top innecesario */
+    padding: 40px; /* Doblamos el padding */
     background-color: rgba(0, 0, 0, 0.0);
     min-height: 100vh;
 }
@@ -86,16 +85,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 900px;
-    margin: 20px auto;
-    gap: 20px;
+    max-width: 1800px; /* Doblamos el max-width */
+    margin: 40px auto; /* Doblamos el margen */
+    gap: 40px; /* Doblamos el espacio entre elementos */
 }
 
 /* Estilos para texto */
 .text-container {
     width: 50%;
     text-align: left;
-    font-size: 12px;
+    font-size: 24px; /* Doblamos el tamaño de la fuente */
 }
 
 .home_title {
@@ -112,13 +111,13 @@ body {
 }
 
 .image-container img {
-    width: 60%;
+    width: 60%; /* Aumentamos el tamaño de la imagen */
     height: auto;
-    border-radius: 10px;
+    border-radius: 20px; /* Doblamos el borde redondeado */
 }
-.black_container {
 
-   height: 200px;
+.black_container {
+   height: 400px; /* Doblamos la altura */
    background-color: black;
    display: flex;
    justify-content: center;
@@ -126,9 +125,8 @@ body {
 }
 
 .black_logo {
-
-    width: 100px;
-    height: 100px;
+    width: 200px; /* Doblamos el tamaño */
+    height: 200px; /* Doblamos el tamaño */
     object-fit: contain;
 }
 
@@ -138,17 +136,17 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 10px;
+        padding: 20px; /* Doblamos el padding */
     }
 
     .logo_padre {
-        margin-bottom: 10px;
+        margin-bottom: 20px; /* Doblamos el margen */
     }
 
     .nav-links {
         display: flex;
         justify-content: center;
-        gap: 15px;
+        gap: 30px; /* Doblamos el espacio entre elementos */
         padding: 0;
     }
 
@@ -157,7 +155,7 @@ body {
     }
 
     .content {
-        padding: 20px; /* Eliminamos el padding adicional innecesario */
+        padding: 40px; /* Doblamos el padding */
     }
 
     .content-container {

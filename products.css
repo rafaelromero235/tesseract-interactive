@@ -1,4 +1,3 @@
-/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +32,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 20px;
+    padding: 30px 40px; /* Doblamos el padding */
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
     z-index: 100;
@@ -44,14 +43,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 100px;
+    width: 200px; /* Doblamos el tamaño */
+    height: 200px; /* Doblamos el tamaño */
 }
 
 /* Logo */
 .logo {
-    width: 100px;
-    height: 100px;
+    width: 200px; /* Doblamos el tamaño */
+    height: 200px; /* Doblamos el tamaño */
     object-fit: contain;
 }
 
@@ -62,13 +61,13 @@ body {
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin-left: 25px; /* Doblamos el margen */
 }
 
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 36px; /* Doblamos el tamaño de la fuente */
     transition: color 0.3s;
 }
 
@@ -78,6 +77,7 @@ body {
 
 /* Ajuste del contenido para que empiece justo después de la navbar */
 .content {
+    margin-top: 50px;
     position: relative;
     padding: 180px 20px 20px; /* 100px arriba para evitar que el contenido quede detrás de la navbar */
     background-color: rgba(0, 0, 0, 0.0);
@@ -89,10 +89,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 900px;
-    margin: 20px auto;
-    gap: 20px;
-
+    max-width: 1440px; /* Aumento el max-width en un 60% */
+    margin: 40px auto; /* Aumento el margen */
+    gap: 40px; /* Aumento el espacio entre elementos */
     background-color: black;
 }
 
@@ -101,23 +100,23 @@ body {
     width: 50%;
 }
 .text-container {
-    padding: 20px;
+    padding: 30px; /* Aumento el padding */
     text-align: justify;
-    font-size: 14px;
+    font-size: 22px; /* Aumento el tamaño del texto en un 60% */
 }
 .home_title {
     text-align: center;
 }
 
 .parrafo_home { 
-
-    font-size: 12px;
+    font-size: 19px; /* Aumento el tamaño del párrafo en un 60% */
 }
+
 /* Imagen dentro del contenedor */
 .image-container img {
-    width: 70%;
+    width: 112%; /* Aumento el tamaño de la imagen en un 60% */
     height: auto;
-    border-radius: 10px;
+    border-radius: 16px; /* Aumento el radio de borde */
 }
 
 /* Video centrado con tamaño ajustado al viewport */
@@ -130,46 +129,44 @@ body {
 }
 
 .video-container video {
-    width: 50%; /* Hace que el video ocupe el ancho completo */
-    max-width: 600px; /* Máximo tamaño del video */
+    width: 80%; /* Aumento el ancho del video en un 60% */
+    max-width: 960px; /* Aumento el tamaño máximo */
     height: auto; /* Mantiene la proporción del video */
     max-height: 80vh; /* Limita la altura máxima a un 80% del viewport */
     object-fit: contain; /* Mantiene la relación de aspecto */
 }
 
 .black_container {
-
-    height: 200px;
+    height: 300px; /* Aumento la altura */
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
- }
- 
- .black_logo {
- 
-     width: 100px;
-     height: 100px;
-     object-fit: contain;
- }
- 
+}
+
+.black_logo {
+    width: 160px; /* Aumento el tamaño del logo */
+    height: 160px; /* Aumento el tamaño del logo */
+    object-fit: contain;
+}
+
 /* RESPONSIVE: En móvil, el contenido se apila */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 10px;
+        padding: 20px; /* Aumento el padding */
     }
 
     .logo_padre {
-        margin-bottom: 10px;
+        margin-bottom: 20px; /* Aumento el margen */
     }
 
     .nav-links {
         display: flex;
         justify-content: center;
-        gap: 15px;
+        gap: 30px; /* Aumento el espacio entre elementos */
         padding: 0;
     }
 
@@ -192,6 +189,6 @@ body {
 
     .video-container video {
         max-width: 100%; /* Ajusta el video para pantallas más pequeñas */
-        max-height: 60vh; /* Limita la altura a un 60% en móviles */
+        max-height: 70vh; /* Limita la altura a un 70% en móviles */
     }
 }
