@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Fondo en una Web</title>
-    <link rel="stylesheet" href="products.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="products.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productos | Mystical Tactics</title>
+  <link rel="stylesheet" href="products.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="products.js" defer></script>
 </head>
 <body>
 
-    <nav class="navbar">
+  <!-- Barra de navegación -->
+      <nav class="navbar">
         <div class="logo_padre">
             <img src="assets/FullLogo_Transparent.png" alt="Logo" class="logo" />
-
         </div>
-        <ul class="nav-links">
+        <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="team.html">Team</a></li>
@@ -23,56 +28,56 @@
         </ul>
     </nav>
 
-    <div class="content">
-        <div class="content-container">
-            <div class="text-container">
-                <h2 class="home_title">Mystical Tactics</h2>
-                <p class="parrafo_home">
-                    Mystical Tactics is a combat card game with augmented reality that combines strategy, magic, and real-time tactics. Players collect and customize a deck of mystical cards, each representing heroes, spells, and creatures with unique abilities. Using augmented reality, battles come to life in physical environments, projecting spectacular visual effects and 3D creatures onto the game table or any surface. In Mystical Tactics, the key to success lies in strategic planning and mastering card synergies. Players can summon creatures, cast spells, and activate special abilities to outmaneuver their opponents. With a magical aesthetic and an immersive gameplay experience enhanced by augmented reality, Mystical Tactics offers an innovative experience for card game and strategy enthusiasts.
-                </p>
-            </div>
-            <div class="image-container">
-                <img src="assets/Tesseract-11.jpg" class="imagen_content" alt="Imagen de ejemplo" />
-            </div>
+  <!-- Contenido principal -->
+  <div class="content">
+    <div class="content-container">
+      <div class="text-container">
+        <h2 class="home_title">Mystical Tactics</h2>
+        <p class="parrafo_home">
+          Mystical Tactics is a combat card game with augmented reality that combines strategy, magic, and real-time tactics. Players collect and customize a deck of mystical cards, each representing heroes, spells, and creatures with unique abilities. Using augmented reality, battles come to life in physical environments, projecting spectacular visual effects and 3D creatures onto the game table or any surface. In Mystical Tactics, the key to success lies in strategic planning and mastering card synergies. Players can summon creatures, cast spells, and activate special abilities to outmaneuver their opponents. With a magical aesthetic and an immersive gameplay experience enhanced by augmented reality, Mystical Tactics offers an innovative experience for card game and strategy enthusiasts.
+      </div>
+      <div class="image-container">
+        <img src="assets/Tesseract-11.jpg" class="imagen_content" alt="Imagen de producto" />
+      </div>
+    </div>
+
+    <!-- Carrusel de videos -->
+    <div class="carousel-container">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel">
+        <div class="carousel-item">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/j-3OgS-GF5g?si=sc2YNoOs9cW-UBBh" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="carousel-item">
+          <video controls>
+            <source src="assets/render.mp4" type="video/mp4" />
+            Tu navegador no soporta la etiqueta de video.
+          </video>
+        </div>
+        <div class="carousel-item">
+          <iframe title="vimeo-player" src="https://player.vimeo.com/video/1098172890?h=1253062a5a" width="640" height="360" frameborder="0" allowfullscreen></iframe>
         </div>
 
-        <!-- Carrusel de videos de YouTube -->
-  <div class="carousel-container">
-  <button class="carousel-btn prev">&#10094;</button>
-  <div class="carousel">
-    
-    <!-- Video 1: YouTube -->
-    <div class="carousel-item">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/j-3OgS-GF5g?si=sc2YNoOs9cW-UBBh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         <div class="carousel-item">
+       <iframe title="vimeo-player" src="https://player.vimeo.com/video/1098287497?h=feea5adfc6" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+        </div>
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
     </div>
 
-    <!-- Video 2: Archivo local -->
-     <div class="carousel-item">
-      <video controls>
-        <source src="assets/render.mp4" type="video/mp4" />
-        Tu navegador no soporta la etiqueta de video.
-      </video>
-    </div>
-        <div class="carousel-item">
-            <iframe title="vimeo-player" src="https://player.vimeo.com/video/1098172890?h=1253062a5a" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
-    </div>
-
-  </div>
-  <button class="carousel-btn next">&#10095;</button>
-</div>
+    <!-- Instagram -->
     <div>
-        
-        <a class="link_instagram" href="https://www.instagram.com/mystical_tactics?igsh=MWlkOWptZ2o4dmtpZQ%3D%3D&utm_source=qr">
-            
-            <i class="fab fa-instagram"></i>
-            <p class="title_instagram">Follow us on Instagram</p>
-        </a>
-        
+      <a class="link_instagram" href="https://www.instagram.com/mystical_tactics">
+        <i class="fab fa-instagram"></i>
+        <p class="title_instagram">Follow us on Instagram</p>
+      </a>
     </div>
 
+    <!-- Footer -->
     <div class="black_container">
-        <img src="assets/FullLogo_Transparent.png" alt="logo" class="black_logo" />
+      <img src="assets/FullLogo_Transparent.png" alt="logo" class="black_logo" />
     </div>
+  </div>
 
 </body>
 </html>

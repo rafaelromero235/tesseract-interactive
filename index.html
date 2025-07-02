@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fondo en una Web</title>
     <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+    <script src="index.js" defer></script>
 </head>
 <body>
 
-    <nav class="navbar">
+   <!-- Barra de navegación -->
+      <nav class="navbar">
         <div class="logo_padre">
-            <img src="assets/FullLogo_Transparent.png" alt="Logo" class="logo">
+            <img src="assets/FullLogo_Transparent.png" alt="Logo" class="logo" />
         </div>
-        <ul class="nav-links">
+        <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="team.html">Team</a></li>

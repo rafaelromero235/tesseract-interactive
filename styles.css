@@ -55,23 +55,57 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
+    gap: 25px;
 }
 
-.nav-links li {
-    margin-left: 25px; /* Doblamos el margen */
-}
-
-.nav-links a {
+.nav-links li a {
     text-decoration: none;
     color: white;
-    font-size: 36px; /* Doblamos el tamaño de la fuente */
+    font-size: 36px;
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.nav-links li a:hover {
     color: #f39c12;
 }
 
+/* Botón hamburguesa (oculto en escritorio) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
+.bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Animación botón hamburguesa cuando activo */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
 /* Ajuste del contenido para que empiece justo después de la navbar */
 .content {
     position: relative;
@@ -132,26 +166,40 @@ body {
 
 /* Diseño para móviles */
 @media (max-width: 768px) {
-    .navbar {
+   /* Mostrar botón hamburguesa */
+    .hamburger {
+        display: flex;
+    }
+    .navbar{
+        z-index: 100;
+    }
+
+    /* Ocultar menú por defecto */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95);
         flex-direction: column;
         align-items: center;
-        text-align: center;
-        padding: 20px; /* Doblamos el padding */
-    }
-
-    .logo_padre {
-        margin-bottom: 20px; /* Doblamos el margen */
-    }
-
-    .nav-links {
-        display: flex;
         justify-content: center;
-        gap: 30px; /* Doblamos el espacio entre elementos */
+        width: 70%;
+        max-width: 300px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        gap: 40px;
         padding: 0;
+        margin: 0;
     }
 
-    .nav-links li {
-        margin: 0;
+    /* Mostrar menú al activar */
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .nav-links li a {
+        font-size: 28px;
     }
 
     .content {

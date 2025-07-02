@@ -6,13 +6,11 @@
 
 html {
   font-size: 16px;
-  line-height: 1.5;
   font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  width: 100%;
-  height: 100%;
   background-image: url('assets/fondo.png');
   background-size: cover;
   background-position: center top;
@@ -22,103 +20,133 @@ body {
   text-align: center;
 }
 
-/* Navbar (sin cambios, como estaba) */
+/* ================== NAVBAR =================== */
 .navbar {
-  position: relative;
-  top: 0;
-  left: 0;
   width: 100%;
+  padding: 20px 30px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 40px;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(5px);
-  z-index: 100;
+  position: relative;
+  z-index: 999;
 }
 
 .logo_padre {
+  width: 120px;
+  height: 120px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 200px;
-  height: 200px;
 }
 
 .logo {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
+/* Menú de navegación */
 .nav-links {
-  list-style: none;
-  display: flex;
+    list-style: none;
+    display: flex;
+    gap: 25px;
 }
 
-.nav-links li {
-  margin-left: 25px;
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 36px;
+    transition: color 0.3s;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  font-size: 36px;
-  transition: color 0.3s;
+.nav-links li a:hover {
+    color: #f39c12;
 }
 
-.nav-links a:hover {
-  color: #f39c12;
+/* Botón hamburguesa (oculto en escritorio) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 200;
 }
 
-/* Contenido principal */
+.hamburger:focus {
+    outline: none;
+}
+
+.bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Animación botón hamburguesa cuando activo */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ================== CONTENT =================== */
 .content {
-  margin-top: 50px;
-  position: relative;
-  padding: 180px 20px 20px;
-  background-color: rgba(0, 0, 0, 0.0);
+  padding: 180px 20px 40px;
   min-height: 100vh;
 }
 
 .content-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 1740px;
-  margin: 40px auto;
+  justify-content: space-between;
+  max-width: 1600px;
+  margin: auto;
   gap: 40px;
   background-color: black;
+  padding: 40px;
+  border-radius: 12px;
+  flex-wrap: wrap;
 }
 
 .text-container, .image-container {
-  width: 50%;
+  flex: 1;
 }
 
 .text-container {
-  padding: 30px;
   text-align: justify;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .home_title {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 32px;
 }
 
 .parrafo_home {
-  font-size: 19px;
-}
-.parrafo_home {
-  font-size: 19px;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .image-container img {
-  width: 112%;
-  height: auto;
-  border-radius: 16px;
+  width: 100%;
+  border-radius: 12px;
 }
 
-/* Carrusel de YouTube */
+/* ================== CAROUSEL =================== */
 .carousel-container {
   position: relative;
   max-width: 960px;
@@ -134,14 +162,6 @@ body {
   transition: transform 0.5s ease;
   width: 100%;
 }
-.carousel-item video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 .carousel-item {
   min-width: 100%;
@@ -150,13 +170,16 @@ body {
   position: relative;
 }
 
-.carousel-item iframe {
+.carousel-item iframe,
+.carousel-item video {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   border: none;
+  object-fit: contain;
 }
 
 .carousel-btn {
@@ -184,62 +207,82 @@ body {
   right: 0;
 }
 
-/* Pie */
+/* ================== INSTAGRAM =================== */
+.link_instagram {
+  text-decoration: none;
+  color: white;
+  margin-top: 50px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.fab {
+  font-size: 100px;
+}
+
+.title_instagram {
+  font-size: 32px;
+  margin-top: 10px;
+}
+
+/* ================== FOOTER =================== */
 .black_container {
-   height: 400px; /* Doblamos la altura */
-   background-color: black;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  background-color: black;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .black_logo {
-  width: 300px;
-  max-width: 80%;
+  width: 250px;
+  max-width: 90%;
 }
 
-.fab{
-    font-size: 200px;
-    text-decoration: none;
-    color: white;
-}
-.title_instagram{
-
-    font-size: 50px;
-    text-decoration: none;
-    color: white;
-}
-.link_instagram{
-    text-decoration: none;
-}
-
-/* Responsive */
+/* ================== RESPONSIVE =================== */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-  }
+ .navbar {
+        padding: 20px;
+    }
 
-  .logo_padre {
-    margin-bottom: 20px;
-  }
+    .logo_padre {
+        margin-bottom: 20px;
+    }
 
-  .nav-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 0;
-  }
+    /* Mostrar botón hamburguesa */
+    .hamburger {
+        display: flex;
+    }
 
-  .nav-links li {
-    margin: 0;
-  }
+    /* Ocultar menú por defecto */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        max-width: 300px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        gap: 40px;
+        padding: 0;
+        margin: 0;
+    }
 
-  .content {
-    padding: 25px 0px 20px 20px;
-  }
+    /* Mostrar menú al activar */
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .nav-links li a {
+        font-size: 28px;
+    }
 
   .content-container {
     flex-direction: column;
@@ -250,12 +293,15 @@ body {
     width: 100%;
   }
 
-  .video-container video {
-    max-width: 100%;
-    max-height: 70vh;
+  .nav-links li a {
+    font-size: 20px;
   }
 
-  .nav-links a {
+  .fab {
+    font-size: 80px;
+  }
+
+  .title_instagram {
     font-size: 24px;
   }
 }

@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Fondo en una Web</title>
-    <link rel="stylesheet" href="team.css"> <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="team.css" />
 </head>
 <body>
-
     <nav class="navbar">
         <div class="logo_padre">
-            <img src="assets/FullLogo_Transparent.png" alt="Logo" class="logo">
+            <img src="assets/FullLogo_Transparent.png" alt="Logo" class="logo" />
         </div>
-        <ul class="nav-links">
+        <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="team.html">Team</a></li>
@@ -23,35 +27,35 @@
     <div class="content">
         <div class="content-container">
             <div class="text-container">
-                <h2 class="home_title">             </h2>
-                <p class="parrafo_home">We are Rafael and Joan, two cousins passionate about technology and interactive experience design. Together, we founded Tesseract Interactive with a clear vision: to revolutionize the way people interact with video games through augmented reality.
-</p>
+                <h2 class="home_title"></h2>
+                <p class="parrafo_home">
+                    We are Rafael and Joan, two cousins passionate about technology and interactive experience design.
+                    Together, we founded Tesseract Interactive with a clear vision: to revolutionize the way people interact with video games through augmented reality.
+                </p>
             </div>
             <div class="image-container">
-                <img src="assets/Tesseract-4.jpg" class="imagen_content" alt="Imagen de ejemplo">
+                <img src="assets/Tesseract-4.jpg" class="imagen_content" alt="Imagen de ejemplo" />
             </div>
-           
         </div>
 
         <div class="content-container2">
-
             <div class="image-container2">
-                <img src="assets/Tesseract-3.jpg" class="imagen_content" alt="Imagen de ejemplo">
+                <img src="assets/Tesseract-3.jpg" class="imagen_content" alt="Imagen de ejemplo" />
             </div>
             <div class="text-container2">
-                <h2 class="home_title2">              </h2>
-                <p class="parrafo_home2">We believe in the power of innovation to transform digital entertainment. That’s why we combine creativity, technology, and storytelling to develop immersive experiences that connect with players in a unique way.  </p>
+                <h2 class="home_title2"></h2>
+                <p class="parrafo_home2">
+                    We believe in the power of innovation to transform digital entertainment. That’s why we combine creativity, technology, and storytelling to develop immersive experiences that connect with players in a unique way.
+                </p>
             </div>
-
         </div>
-
-        <!-- Video centrado debajo del contenido -->
-      
     </div>
-
 
     <div class="black_container">
-        <img src="assets/FullLogo_Transparent.png" alt="logo" class="black_logo">
+        <img src="assets/FullLogo_Transparent.png" alt="logo" class="black_logo" />
     </div>
+
+    <!-- Enlace al archivo JS -->
+    <script src="team.js"></script>
 </body>
 </html>
