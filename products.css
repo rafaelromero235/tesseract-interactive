@@ -1,194 +1,261 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
 }
 
-/* Fondo fijo */
 body {
-    width: 100%;
-    height: 100%;
-    background-image: url('assets/fondo.png');
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: white;
-    text-align: center;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/fondo.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
 }
 
-/* Navbar fija en la parte superior */
+/* Navbar (sin cambios, como estaba) */
 .navbar {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px 40px; /* Doblamos el padding */
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(5px);
-    z-index: 100;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 40px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  z-index: 100;
 }
 
-/* Contenedor del logo */
 .logo_padre {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px; /* Doblamos el tamaño */
-    height: 200px; /* Doblamos el tamaño */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
 }
 
-/* Logo */
 .logo {
-    width: 200px; /* Doblamos el tamaño */
-    height: 200px; /* Doblamos el tamaño */
-    object-fit: contain;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
 }
 
-/* Menú de navegación */
 .nav-links {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 .nav-links li {
-    margin-left: 25px; /* Doblamos el margen */
+  margin-left: 25px;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 36px; /* Doblamos el tamaño de la fuente */
-    transition: color 0.3s;
+  text-decoration: none;
+  color: white;
+  font-size: 36px;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #f39c12;
+  color: #f39c12;
 }
 
-/* Ajuste del contenido para que empiece justo después de la navbar */
+/* Contenido principal */
 .content {
-    margin-top: 50px;
-    position: relative;
-    padding: 180px 20px 20px; /* 100px arriba para evitar que el contenido quede detrás de la navbar */
-    background-color: rgba(0, 0, 0, 0.0);
-    min-height: 100vh;
+  margin-top: 50px;
+  position: relative;
+  padding: 180px 20px 20px;
+  background-color: rgba(0, 0, 0, 0.0);
+  min-height: 100vh;
 }
 
-/* Contenedor flexible para el texto e imagen */
 .content-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1440px; /* Aumento el max-width en un 60% */
-    margin: 40px auto; /* Aumento el margen */
-    gap: 40px; /* Aumento el espacio entre elementos */
-    background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1740px;
+  margin: 40px auto;
+  gap: 40px;
+  background-color: black;
 }
 
-/* Ajuste para que el texto y la imagen ocupen la mitad del ancho */
 .text-container, .image-container {
-    width: 50%;
+  width: 50%;
 }
+
 .text-container {
-    padding: 30px; /* Aumento el padding */
-    text-align: justify;
-    font-size: 22px; /* Aumento el tamaño del texto en un 60% */
+  padding: 30px;
+  text-align: justify;
+  font-size: 22px;
 }
+
 .home_title {
-    text-align: center;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.parrafo_home { 
-    font-size: 19px; /* Aumento el tamaño del párrafo en un 60% */
+.parrafo_home {
+  font-size: 19px;
+}
+.parrafo_home {
+  font-size: 19px;
 }
 
-/* Imagen dentro del contenedor */
 .image-container img {
-    width: 112%; /* Aumento el tamaño de la imagen en un 60% */
-    height: auto;
-    border-radius: 16px; /* Aumento el radio de borde */
+  width: 112%;
+  height: auto;
+  border-radius: 16px;
 }
 
-/* Video centrado con tamaño ajustado al viewport */
-.video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px; /* Espacio después del contenido */
-    width: 100%;
+/* Carrusel de YouTube */
+.carousel-container {
+  position: relative;
+  max-width: 960px;
+  margin: 40px auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.video-container video {
-    width: 80%; /* Aumento el ancho del video en un 60% */
-    max-width: 960px; /* Aumento el tamaño máximo */
-    height: auto; /* Mantiene la proporción del video */
-    max-height: 80vh; /* Limita la altura máxima a un 80% del viewport */
-    object-fit: contain; /* Mantiene la relación de aspecto */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+.carousel-item video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
+.carousel-item {
+  min-width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.carousel-item iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn.prev {
+  left: 0;
+}
+
+.carousel-btn.next {
+  right: 0;
+}
+
+/* Pie */
 .black_container {
-    height: 300px; /* Aumento la altura */
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   height: 400px; /* Doblamos la altura */
+   background-color: black;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .black_logo {
-    width: 160px; /* Aumento el tamaño del logo */
-    height: 160px; /* Aumento el tamaño del logo */
-    object-fit: contain;
+  width: 300px;
+  max-width: 80%;
 }
 
-/* RESPONSIVE: En móvil, el contenido se apila */
+.fab{
+    font-size: 200px;
+    text-decoration: none;
+    color: white;
+}
+.title_instagram{
+
+    font-size: 50px;
+    text-decoration: none;
+    color: white;
+}
+.link_instagram{
+    text-decoration: none;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px; /* Aumento el padding */
-    }
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
 
-    .logo_padre {
-        margin-bottom: 20px; /* Aumento el margen */
-    }
+  .logo_padre {
+    margin-bottom: 20px;
+  }
 
-    .nav-links {
-        display: flex;
-        justify-content: center;
-        gap: 30px; /* Aumento el espacio entre elementos */
-        padding: 0;
-    }
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+  }
 
-    .nav-links li {
-        margin: 0;
-    }
+  .nav-links li {
+    margin: 0;
+  }
 
-    .content {
-        padding: 25px 0px 20px 20px; /* Espacio adicional para navbar en móvil */
-    }
+  .content {
+    padding: 25px 0px 20px 20px;
+  }
 
-    .content-container {
-        flex-direction: column;
-        text-align: center;
-    }
+  .content-container {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .text-container, .image-container {
-        width: 100%;
-    }
+  .text-container, .image-container {
+    width: 100%;
+  }
 
-    .video-container video {
-        max-width: 100%; /* Ajusta el video para pantallas más pequeñas */
-        max-height: 70vh; /* Limita la altura a un 70% en móviles */
-    }
+  .video-container video {
+    max-width: 100%;
+    max-height: 70vh;
+  }
+
+  .nav-links a {
+    font-size: 24px;
+  }
 }

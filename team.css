@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+}
+
+/* Fondo fijo */
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/fondo.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+}
+
+/* Navbar fija en la parte superior */
+.navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px; /* Doblamos el padding */
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+}
+
+/* Contenedor del logo */
+.logo_padre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px; /* Doblamos el tamaño */
+    height: 200px; /* Doblamos el tamaño */
+}
+
+/* Logo */
+.logo {
+    width: 200px; /* Doblamos el tamaño */
+    height: 200px; /* Doblamos el tamaño */
+    object-fit: contain;
+}
+
+/* Menú de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px; /* Doblamos el margen */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 36px; /* Doblamos el tamaño de la fuente */
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+/* Ajuste del contenido para que empiece justo después de la navbar */
+.content {
+    margin-top: 50px;
+    position: relative;
+    padding: 180px 20px 20px; /* 100px arriba para evitar que el contenido quede detrás de la navbar */
+    background-color: rgba(0, 0, 0, 0.0);
+    min-height: 100vh;
+}
+
+/* Contenedor flexible para el texto e imagen */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px; /* Aumento el max-width en un 60% */
+    margin: 40px auto; /* Aumento el margen */
+    gap: 40px; /* Aumento el espacio entre elementos */
+    background-color: black;
+}
+.content-container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px; /* Aumento el max-width en un 60% */
+    margin: 40px auto; /* Aumento el margen */
+    gap: 40px; /* Aumento el espacio entre elementos */
+    background-color: black;
+}
+
+
+/* Ajuste para que el texto y la imagen ocupen la mitad del ancho */
+.text-container, .image-container {
+    width: 50%;
+}
+
+.text-container2, .image-container2 {
+    width: 50%;
+}
+.text-container {
+    padding: 30px; /* Aumento el padding */
+    text-align: justify;
+    font-size: 22px; /* Aumento el tamaño del texto en un 60% */
+}
+.home_title {
+    text-align: center;
+}
+.text-container2 {
+    padding: 30px; /* Aumento el padding */
+    text-align: justify;
+    font-size: 22px; /* Aumento el tamaño del texto en un 60% */
+}
+.home_title2 {
+    text-align: center;
+}
+
+.parrafo_home { 
+    font-size: 25px; /* Aumento el tamaño del párrafo en un 60% */
+}
+.parrafo_home2 { 
+    font-size: 25px;/* Aumento el tamaño del párrafo en un 60% */
+padding: 80px;
+
+}
+/* Imagen dentro del contenedor */
+.image-container img {
+    width: 112%; /* Aumento el tamaño de la imagen en un 60% */
+    height: auto;
+    border-radius: 16px; /* Aumento el radio de borde */
+}
+
+.image-container2 img {
+    width: 112%; /* Aumento el tamaño de la imagen en un 60% */
+    height: auto;
+    border-radius: 16px; /* Aumento el radio de borde */
+}
+
+/* Video centrado con tamaño ajustado al viewport */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; /* Espacio después del contenido */
+    width: 100%;
+}
+
+.video-container video {
+    width: 80%; /* Aumento el ancho del video en un 60% */
+    max-width: 960px; /* Aumento el tamaño máximo */
+    height: auto; /* Mantiene la proporción del video */
+    max-height: 80vh; /* Limita la altura máxima a un 80% del viewport */
+    object-fit: contain; /* Mantiene la relación de aspecto */
+}
+
+.black_container {
+    height: 300px; /* Aumento la altura */
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.black_logo {
+    width: 160px; /* Aumento el tamaño del logo */
+    height: 160px; /* Aumento el tamaño del logo */
+    object-fit: contain;
+}
+
+/* RESPONSIVE: En móvil, el contenido se apila */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px; /* Aumento el padding */
+    }
+
+    .logo_padre {
+        margin-bottom: 20px; /* Aumento el margen */
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 30px; /* Aumento el espacio entre elementos */
+        padding: 0;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .content {
+        padding: 25px 0px 20px 20px; /* Espacio adicional para navbar en móvil */
+    }
+
+    .content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-container, .image-container {
+        width: 100%;
+    }
+
+    .video-container video {
+        max-width: 100%; /* Ajusta el video para pantallas más pequeñas */
+        max-height: 70vh; /* Limita la altura a un 70% en móviles */
+    }
+}
